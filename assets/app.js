@@ -171,7 +171,7 @@ function renderHrTables(){
 
 function seedHr(){
   [
-    {name:'Hiring Enhancements',suborg:'Talent',category:'Platform/Integration',status:'Live',window:'Current',kpis:['time-to-hire','req aging']},
+    {name:'Workday Hiring Enhancements',suborg:'Talent',category:'Platform/Integration',status:'Live',window:'Current',kpis:['time-to-hire','req aging']},
     {name:'Recruiter Copilot',suborg:'Talent',category:'Copilot/Agent',status:'Pilot',window:'Current',kpis:['screening throughput','adverse impact %']},
     {name:'Interview Guide Generator',suborg:'Talent',category:'Knowledge/RAG',status:'Idea',window:'Future',kpis:['prep time','interviewer NPS']},
     {name:'Skills Graph & Learning Paths',suborg:'L&D',category:'Analytics/KPI',status:'Pilot',window:'Current',kpis:['skill delta','learning uptake']},
@@ -214,37 +214,37 @@ const govCopy = {
   strategy: {
     title: "Strategy (C-Suite)",
     body: ["Define Human + AI vision for HR","Set goals & risk appetite","Fund the roadmap and success metrics"],
-    "Approves HR AI North Star + budget."
+     "Approves HR AI North Star + budget."
   },
   standards: {
     title: "Standards (CoE)",
     body: ["Translate strategy into frameworks & playbooks","Publish reusable patterns (RAG, agents, analytics)","Define approval gates & quality bars"],
-    "Standard for PII redaction and evals."
+     "Standard for PII redaction and evals."
   },
   implementation: {
     title: "Implementation (Business Units)",
     body: ["Deliver prioritized use cases","Meet guardrails & standards","Report KPIs and feedback"],
-    "Talent ships Recruiter Copilot pilot."
+     "Talent ships Recruiter Copilot pilot."
   },
   operations: {
     title: "Operations (BAU)",
     body: ["Support & enablement","Telemetry & adoption","Incident response"],
-    "HR Ops maintains Service Desk copilot."
+     "HR Ops maintains Service Desk copilot."
   },
   council: {
     title: "Governance Council",
     body: ["Cross-functional alignment (HR, IT, Data, Legal/Privacy, Security, RAI)","Approve high-risk launches","Review incidents & ROI"],
-    "Council reviews bias test results before launch."
+     "Council reviews bias test results before launch."
   },
   guardrails: {
     title: "Responsible AI Guardrails",
     body: ["Fairness, explainability, privacy","Human-in-the-loop for sensitive decisions","Red-teaming & continuous monitoring"],
-    "Hiring models require HIL decision step."
+     "Hiring models require HIL decision step."
   },
   data: {
     title: "Trusted Data Foundations",
     body: ["PII governance & lineage","Access control & observability","Secure integrations & cost control"],
-    "Feature store with audit trails."
+     "Feature store with audit trails."
   }
 };
 
@@ -281,7 +281,17 @@ function bindGovHotspots(){
 }
 
 // --- Cadence Carousel
-const cadenceCards=[{title:"Weekly — People Tech Council Sync",jtbd:["Prioritize & unblock pilots","Review risk & approvals","Track ROI telemetry"],attendees:"Executive Sponsor, People Tech Leads, HR Leaders, Legal/Privacy, Security, Data, RAI SMEs, IT Partners"},{title:"Bi-Weekly — Talent Working Session",jtbd:["Reduce time-to-hire","Improve candidate experience","Monitor adverse impact"],attendees:"Talent Lead, Recruiters, People Analytics, IT, RAI"},{title:"Bi-Weekly — L&D + Skills",jtbd:["Boost learning uptake","Map skills to roles","Inform career pathways"],attendees:"L&D Lead, People Analytics, COE, IT"},{title:"Monthly — Comp & Benefits",jtbd:["Ensure pay equity & compliance","Improve employee clarity on rewards","Evaluate benefits Q&A deflection"],attendees:"Total Rewards, Legal/Privacy, RAI, Data"},{title:"Weekly — HR Ops Enablement",jtbd:["Deflect cases","Improve policy discovery","Increase FCR/AHT efficiency"],attendees:"HR Ops Lead, Service Desk, IT, COE, RAI"},{title:"Quarterly — Executive Outcome Review",jtbd:["Validate business impact","Refresh roadmap","Budget and platform investments"],attendees:"CPO, Rich, Elle, Finance, IT, Data"}]; function initCarousel(){const track = $('#carTrack'); if(!track) return;
+const cadenceCards = [
+  {title:"Weekly — People Tech Council Sync", jtbd:["Prioritize & unblock pilots","Review risk & approvals","Track ROI telemetry"], attendees:"Executive Sponsor, People Tech Leads, HR Leaders, Legal/Privacy, Security, Data, RAI SMEs, IT Partners"},
+  {title:"Bi-Weekly — Talent Working Session", jtbd:["Reduce time-to-hire","Improve candidate experience","Monitor adverse impact"], attendees:"Talent Lead, Recruiters, People Analytics, IT, RAI"},
+  {title:"Bi-Weekly — L&D + Skills", jtbd:["Boost learning uptake","Map skills to roles","Inform career pathways"], attendees:"L&D Lead, People Analytics, COE, IT"},
+  {title:"Monthly — Comp & Benefits", jtbd:["Ensure pay equity & compliance","Improve employee clarity on rewards","Evaluate benefits Q&A deflection"], attendees:"Total Rewards, Legal/Privacy, RAI, Data"},
+  {title:"Weekly — HR Ops Enablement", jtbd:["Deflect cases","Improve policy discovery","Increase FCR/AHT efficiency"], attendees:"HR Ops Lead, Service Desk, IT, COE, RAI"},
+  {title:"Quarterly — Executive Outcome Review", jtbd:["Validate business impact","Refresh roadmap","Budget and platform investments"], attendees:"CPO, Rich, Elle, Finance, IT, Data"}
+];
+
+function initCarousel(){
+  const track = $('#carTrack'); if(!track) return;
   track.innerHTML = cadenceCards.map(c=>`
     <div class="car__card">
       <div class="card">
