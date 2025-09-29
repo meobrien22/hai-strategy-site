@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Council Dashboard — Human + AI (Dropbox)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"/></head><body>
+<header class="nav"><div class="nav__inner container"><div class="brand"><div class="brand__logo" aria-hidden="true">◇</div><span>Council Dashboard</span></div>
+<nav class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <div class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false">Dashboards ▾</button>
+        <div class="menu__list" role="menu">
+          <a href="dashboard.html" role="menuitem">Strategist Dashboard</a>
+          <a href="ai-dashboard.html" role="menuitem">AI Platform</a>
+          <a href="council.html" role="menuitem">Council</a>
+          <a href="pulse.html" role="menuitem">Pulse</a>
+        </div>
+      </div>
+      <a href="dream.html">Now → 5-Year Dream</a>
+      <a href="about.html">About</a>
+    </nav></div></header>
+<main class="section"><div class="container grid g-2">
+<div class="card"><h2>System Health Summary</h2><div id="sysHealth" class="grid g-2" aria-label="System health badges"></div></div>
+<div class="card"><h2>Top Initiatives</h2><div class="tablewrap"><table id="topInitiatives" aria-label="Top initiatives"><thead><tr><th>Initiative</th><th>Status</th></tr></thead><tbody></tbody></table></div></div>
+<div class="card"><h2>Escalations</h2><ul id="escalations" aria-label="Escalations needing decision"></ul></div>
+<div class="card"><h2>Upcoming Cadences</h2><ul id="cCadences" aria-label="Upcoming council meetings"></ul></div>
+<div class="card"><h2>KPI Dashboard</h2><div class="metric"><div class="metric__head"><span class="metric__label">Core KPI Index</span><span id="kpiText" class="metric__value">—</span></div><canvas id="kpiSpark" class="spark" aria-label="KPI sparkline"></canvas><div class="small">Composite KPI trend for portfolio health.</div></div></div>
+</div></main><script src="assets/app.js"></script></body></html>

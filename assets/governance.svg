@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
+  <title id="title">Dropbox-style Human + AI Governance Model</title>
+  <desc id="desc">Interactive governance diagram showing Strategy, Standards, Implementation, Operations, Council, Guardrails, and Data Foundations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="bluegrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <style>
+      .panel{fill:#111827;stroke:#1f2a3d;stroke-width:2;rx:14;ry:14}
+      .headline{fill:#e7edf7;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;font-size:22px;font-weight:700}
+      .sub{fill:#9fb0c9;font-size:14px}
+      .line{stroke:#60a5fa;stroke-width:2;stroke-dasharray:6,6;opacity:.7}
+      .center{fill:url(#bluegrad);opacity:.18;stroke:#60a5fa;stroke-width:2}
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1200" height="680" fill="url(#bg)"/>
+  <rect class="panel" x="40" y="40" width="260" height="110"/>
+  <text x="60" y="90" class="headline">Strategy (C-Suite)</text>
+  <text x="60" y="118" class="sub">Vision · goals · risk appetite</text>
+  <rect class="panel" x="340" y="40" width="260" height="110"/>
+  <text x="360" y="90" class="headline">Standards (CoE)</text>
+  <text x="360" y="118" class="sub">Frameworks · playbooks · patterns</text>
+  <rect class="panel" x="640" y="40" width="260" height="110"/>
+  <text x="660" y="90" class="headline">Implementation (BUs)</text>
+  <text x="660" y="118" class="sub">Use-case delivery · compliance</text>
+  <rect class="panel" x="940" y="40" width="220" height="110"/>
+  <text x="960" y="90" class="headline">Operations (BAU)</text>
+  <text x="960" y="118" class="sub">Support · adoption · telemetry</text>
+  <ellipse cx="600" cy="280" rx="210" ry="90" class="center"/>
+  <text x="520" y="280" class="headline">Governance Council</text>
+  <text x="460" y="306" class="sub">HR · IT · Data · Legal/Privacy · Security · RAI</text>
+  <rect class="panel" x="80" y="500" width="420" height="120"/>
+  <text x="100" y="548" class="headline">Responsible AI Guardrails</text>
+  <text x="100" y="576" class="sub">Fairness · explainability · privacy · HIL · evaluations</text>
+  <rect class="panel" x="700" y="500" width="420" height="120"/>
+  <text x="720" y="548" class="headline">Trusted Data Foundations</text>
+  <text x="720" y="576" class="sub">PII governance · lineage · observability · security</text>
+  <line x1="170" y1="150" x2="600" y2="210" class="line"/>
+  <line x1="470" y1="150" x2="600" y2="210" class="line"/>
+  <line x1="770" y1="150" x2="600" y2="210" class="line"/>
+  <line x1="1050" y1="150" x2="600" y2="210" class="line"/>
+  <line x1="600" y1="350" x2="290" y2="500" class="line"/>
+  <line x1="600" y1="350" x2="910" y2="500" class="line"/>
+</svg>

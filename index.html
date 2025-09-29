@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Human + AI Strategist — Dropbox People Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"/></head>
+<body>
+<header class="nav"><div class="nav__inner container"><div class="brand"><div class="brand__logo" aria-hidden="true">◇</div><span>Human + AI Strategist</span></div>
+<nav class="nav__links" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <div class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false">Dashboards ▾</button>
+        <div class="menu__list" role="menu">
+          <a href="dashboard.html" role="menuitem">Strategist Dashboard</a>
+          <a href="ai-dashboard.html" role="menuitem">AI Platform</a>
+          <a href="council.html" role="menuitem">Council</a>
+          <a href="pulse.html" role="menuitem">Pulse</a>
+        </div>
+      </div>
+      <a href="dream.html">Now → 5-Year Dream</a>
+      <a href="about.html">About</a>
+    </nav></div></header>
+
+<main class="hero" role="main"><div class="container hero__grid">
+<div class="hero__copy"><p class="kicker">Dropbox People Tech · Virtual First · HR as a Product</p>
+<h1>Human + AI — <span class="accent">aligned to Dropbox’s mission</span>.</h1>
+<p class="lede">JTBD-first. Prototype in weeks. Govern by default. Measure what matters.</p>
+<div class="hero__cta"><a href="#plan" class="btn btn--primary">My 30·60·90</a><a href="#impact" class="btn btn--ghost">Impact Matrix</a><a href="#governance" class="btn btn--ghost">Governance</a></div></div>
+<div aria-hidden="true" class="card"><p><strong>Strategy → Responsibilities → Execution</strong>, mapped to Dropbox’s culture of craft, experimentation, and people-first design.</p></div>
+</div></main>
+
+<section id="plan" class="section"><div class="container">
+<div class="section__header"><h2>30·60·90 — JTBD in action (0–30, 30–60, 60–90 phases)</h2><p class="subtle">Click a phase to see details. First phase expanded by default.</p></div>
+<div class="plan" role="list">
+<button class="plan__phase" data-phase="0–30 · Align (JTBD Discovery)" aria-label="0–30 Align"><h3>0–30</h3><p>Align</p></button>
+<button class="plan__phase" data-phase="0–30 · Assess (Values & Guardrails)" aria-label="0–30 Assess"><h3>0–30</h3><p>Assess</p></button>
+<button class="plan__phase" data-phase="30–60 · Architect (Product Patterns)" aria-label="30–60 Architect"><h3>30–60</h3><p>Architect</p></button>
+<button class="plan__phase" data-phase="30–60 · Activate (Prototype)" aria-label="30–60 Activate"><h3>30–60</h3><p>Activate</p></button>
+<button class="plan__phase" data-phase="60–90 · Adopt (Enable & Scale)" aria-label="60–90 Adopt"><h3>60–90</h3><p>Adopt</p></button>
+<button class="plan__phase" data-phase="60–90 · Assure (Improve)" aria-label="60–90 Assure"><h3>60–90</h3><p>Assure</p></button>
+</div>
+<div id="phaseDetail" class="card plan__detail" aria-live="polite"><h4>Click a phase above</h4><div class="plan__content"></div></div>
+</div></section>
+
+<section id="impact" class="section section--alt"><div class="container">
+<div class="section__header"><h2>Impact Matrix — Effort × Impact</h2><p class="subtle">Seeded with examples by default. Add your own initiatives.</p></div>
+<div class="grid g-2">
+<div class="card"><h3>Add Initiative</h3><form id="impactForm" class="form">
+<label>Title<input id="impTitle" type="text" /></label>
+<div class="sliders"><div><label>Impact <output id="oImp">6</output></label><input id="impImpact" type="range" min="1" max="10" value="6"/></div>
+<div><label>Effort <output id="oEff">5</output></label><input id="impEffort" type="range" min="1" max="10" value="5"/></div>
+<div><label>Risk <output id="oRisk">3</output></label><input id="impRisk" type="range" min="1" max="10" value="3"/></div></div>
+<button class="btn btn--primary" type="submit">Add</button></form></div>
+<div class="card"><h3>Matrix</h3><canvas id="impactCanvas" width="520" height="520" class="quad__canvas" role="img" aria-label="Impact versus Effort"></canvas></div>
+</div>
+<div class="card"><div class="tablewrap"><table id="impactTable" aria-label="Impact backlog"><thead><tr><th>Initiative</th><th>Impact</th><th>Effort</th><th>Risk</th><th>Score</th></tr></thead><tbody></tbody></table></div></div>
+</div></section>
+
+<section id="solutions" class="section"><div class="container">
+<div class="section__header"><h2>HR Solutions — Current & Future</h2><p class="subtle">Filter by sub-org. Seeded with examples by default.</p></div>
+<div class="card"><form id="hrForm" class="form grid g-2" aria-label="Add HR solution">
+<div><label>Solution Name<input type="text" id="hrName"/></label>
+<label>Sub-Org<select id="hrSuborg"><option value="Talent">Talent</option><option value="L&D">Learning & Development</option><option value="Comp">Comp & Benefits</option><option value="WFP">Workforce Planning</option><option value="HR Ops">HR Ops</option></select></label>
+<label>Category<select id="hrCategory"><option>Copilot/Agent</option><option>Analytics/KPI</option><option>Automation</option><option>Knowledge/RAG</option><option>Platform/Integration</option></select></label></div>
+<div><label>Status<select id="hrStatus"><option>Idea</option><option>Pilot</option><option>Live</option></select></label>
+<label>Window<select id="hrWindow"><option>Current</option><option>Future</option></select></label>
+<label>KPIs (comma-separated)<input type="text" id="hrKpis"/></label>
+<label>Link (optional)<input type="text" id="hrLink"/></label></div>
+<div style="grid-column:1/-1;display:flex;gap:8px;align-items:center"><button class="btn btn--primary" type="submit">Add</button>
+<label style="margin-left:auto">Filter by Sub-Org<select id="hrFilter"><option value="All">All</option><option value="TA">Talent</option><option value="L&D">L&D</option><option value="Comp">Comp</option><option value="WFP">WFP</option><option value="HR Ops">HR Ops</option></select></label></div>
+</form></div>
+<div class="grid g-2">
+<div class="card"><div class="tablewrap"><table id="hrCurrent" aria-label="Current solutions"><thead><tr><th>Solution</th><th>Sub-Org</th><th>Category</th><th>Status</th><th>KPIs</th><th>Link</th></tr></thead><tbody></tbody></table></div></div>
+<div class="card"><div class="tablewrap"><table id="hrFuture" aria-label="Future solutions"><thead><tr><th>Solution</th><th>Sub-Org</th><th>Category</th><th>Status</th><th>KPIs</th><th>Link</th></tr></thead><tbody></tbody></table></div></div>
+</div></div></section>
+
+<section id="risk" class="section section--alt"><div class="container">
+<div class="section__header"><h2>Risk & Change Management</h2><p class="subtle">Status badges include a short reason.</p></div>
+<div class="grid g-3">
+<div class="card"><h3>Top Risks</h3><ul>
+<li><span class="badge badge--crit"><span class="badge__dot"></span>Critical — Privacy PIA overdue</span></li>
+<li><span class="badge badge--warn"><span class="badge__dot"></span>Attention — Bias coverage below 80%</span></li>
+<li><span class="badge badge--warn"><span class="badge__dot"></span>Attention — Model drift signal in TA</span></li>
+</ul></div>
+<div class="card"><h3>Mitigations</h3><ul class="bullets"><li>PIA/DPIA, evals; human-in-the-loop for high-risk</li><li>Identity, least privilege, audit trails</li><li>Bias testing + monitoring</li><li>Playbooks, office hours, champions</li></ul></div>
+<div class="card"><h3>Change Plan</h3><ul class="bullets"><li>Stakeholder map + champions</li><li>Comms: what/why/how</li><li>Role-based training</li><li>Adoption metrics & KPIs</li></ul></div>
+</div></div></section>
+
+<section id="governance" class="section"><div class="container">
+<div class="section__header"><h2>Data & AI Governance — Dropbox-style model</h2><p class="subtle">Click any area to learn what it owns and how it de-risks adoption.</p></div>
+<div class="card gov__wrap" aria-label="Governance diagram">
+<img src="assets/governance.svg" alt="Dropbox-style governance diagram" class="gov__img"/>
+<button class="hotspot" style="left:3%;top:6%;width:21%;height:14%" data-key="strategy" aria-label="Strategy (C-Suite)"></button>
+<button class="hotspot" style="left:30%;top:6%;width:21%;height:14%" data-key="standards" aria-label="Standards (Center of Excellence)"></button>
+<button class="hotspot" style="left:56%;top:6%;width:21%;height:14%" data-key="implementation" aria-label="Implementation (Business Units)"></button>
+<button class="hotspot" style="left:81%;top:6%;width:17%;height:14%" data-key="operations" aria-label="Operations (BAU)"></button>
+<button class="hotspot" style="left:32%;top:36%;width:36%;height:20%" data-key="council" aria-label="Governance Council"></button>
+<button class="hotspot" style="left:7%;top:75%;width:35%;height:18%" data-key="guardrails" aria-label="Responsible AI Guardrails"></button>
+<button class="hotspot" style="left:58%;top:75%;width:35%;height:18%" data-key="data" aria-label="Trusted Data Foundations"></button>
+</div></div></section>
+
+<section id="cadences" class="section section--alt"><div class="container">
+<div class="section__header"><h2>Ongoing Cadences — JTBD by Meeting</h2></div>
+<div class="carousel" aria-roledescription="carousel" aria-label="Cadence cards">
+<button class="car__btn" id="carPrev" aria-label="Previous">‹</button>
+<div class="car__track" id="carTrack"></div>
+<button class="car__btn" id="carNext" aria-label="Next">›</button>
+</div></div></section>
+
+<dialog id="govModal" class="modal" aria-labelledby="modalTitle"><div class="modal__content">
+<button id="modalClose" class="modal__close" aria-label="Close">✕</button><h3 id="modalTitle">Title</h3><div id="modalBody"></div>
+</div></dialog>
+
+<footer class="footer"><div class="container footer__inner"><span>© 2025 · Meghan Fasano</span><a href="dashboard.html">Dashboard</a><a href="council.html">Council</a><a href="pulse.html">Pulse</a></div></footer>
+<script src="assets/app.js"></script></body></html>

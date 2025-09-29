@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pulse Surveys — Executive View</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"/></head><body>
+<header class="nav"><div class="nav__inner container"><div class="brand"><div class="brand__logo" aria-hidden="true">◇</div><span>Pulse Surveys</span></div>
+<nav class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <div class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false">Dashboards ▾</button>
+        <div class="menu__list" role="menu">
+          <a href="dashboard.html" role="menuitem">Strategist Dashboard</a>
+          <a href="ai-dashboard.html" role="menuitem">AI Platform</a>
+          <a href="council.html" role="menuitem">Council</a>
+          <a href="pulse.html" role="menuitem">Pulse</a>
+        </div>
+      </div>
+      <a href="dream.html">Now → 5-Year Dream</a>
+      <a href="about.html">About</a>
+    </nav></div></header>
+<main class="section"><div class="container grid g-2">
+<div class="card"><h2>Survey Health Summary</h2><div id="pulseHealth" class="grid g-2" aria-label="Survey health badges"></div></div>
+<div class="card"><h2>Sentiment Snapshot</h2><div class="metric"><div class="metric__head"><span class="metric__label">Pulse Sentiment</span><span id="sentimentText" class="metric__value">—</span></div><canvas id="sentimentSpark" class="spark" aria-label="Sentiment sparkline"></canvas><div class="small">Employee sentiment trend across initiatives.</div></div></div>
+<div class="card"><h2>Impact to AI Portfolio</h2><div class="tablewrap"><table id="pulseImpact" aria-label="Pulse impact connector"><thead><tr><th>Initiative</th><th>Change</th></tr></thead><tbody></tbody></table></div></div>
+<div class="card"><h2>Recommendations</h2><ul><li>Run enablement for Learning Copilot.</li><li>Council to review Pay Equity thresholds.</li><li>Scale Recruiter Copilot based on sentiment.</li></ul></div>
+</div></main><script src="assets/app.js"></script></body></html>
