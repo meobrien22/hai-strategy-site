@@ -229,7 +229,7 @@ const govCopy = {
   operations: {
     title: "Operations (BAU)",
     body: ["Support & enablement","Telemetry & adoption","Incident response"],
-    example: "HR Ops maintains Service Desk copilot."
+    "HR Ops maintains Service Desk copilot."
   },
   council: {
     title: "Governance Council",
