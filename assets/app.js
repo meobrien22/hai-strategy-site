@@ -281,17 +281,7 @@ function bindGovHotspots(){
 }
 
 // --- Cadence Carousel
-const cadenceCards = [
-  {title:"Weekly — People Tech Council Sync", jtbd:["Prioritize & unblock pilots","Review risk & approvals","Track ROI telemetry"], attendees:"Executive Sponsor, People Tech Leads, HR Leaders, Legal/Privacy, Security, Data, RAI SMEs, IT Partners"},
-  {title:"Weekly — HR Ops Enablement", jtbd:["Deflect cases","Improve policy discovery","Increase FCR/AHT efficiency"], attendees:"HR Ops Lead, Service Desk, IT, COE, RAI"},
-  {title:"Bi-Weekly — Talent Working Session", jtbd:["Reduce time-to-hire","Improve candidate experience","Monitor adverse impact"], attendees:"Talent Lead, Recruiters, People Analytics, IT, RAI"},
-  {title:"Bi-Weekly — L&D + Skills", jtbd:["Boost learning uptake","Map skills to roles","Inform career pathways"], attendees:"L&D Lead, People Analytics, COE, IT"},
-  {title:"Monthly — Comp & Benefits", jtbd:["Ensure pay equity & compliance","Improve employee clarity on rewards","Evaluate benefits Q&A deflection"], attendees:"Total Rewards, Legal/Privacy, RAI, Data"},
-  {title:"Quarterly — Executive Outcome Review", jtbd:["Validate business impact","Refresh roadmap","Budget and platform investments"], attendees:"CPO, Rich, Elle, Finance, IT, Data"}
-];
-
-function initCarousel(){
-  const track = $('#carTrack'); if(!track) return;
+const cadenceCards=[{title:"Weekly — People Tech Council Sync",jtbd:["Prioritize & unblock pilots","Review risk & approvals","Track ROI telemetry"],attendees:"Executive Sponsor, People Tech Leads, HR Leaders, Legal/Privacy, Security, Data, RAI SMEs, IT Partners"},{title:"Bi-Weekly — Talent Working Session",jtbd:["Reduce time-to-hire","Improve candidate experience","Monitor adverse impact"],attendees:"Talent Lead, Recruiters, People Analytics, IT, RAI"},{title:"Bi-Weekly — L&D + Skills",jtbd:["Boost learning uptake","Map skills to roles","Inform career pathways"],attendees:"L&D Lead, People Analytics, COE, IT"},{title:"Monthly — Comp & Benefits",jtbd:["Ensure pay equity & compliance","Improve employee clarity on rewards","Evaluate benefits Q&A deflection"],attendees:"Total Rewards, Legal/Privacy, RAI, Data"},{title:"Weekly — HR Ops Enablement",jtbd:["Deflect cases","Improve policy discovery","Increase FCR/AHT efficiency"],attendees:"HR Ops Lead, Service Desk, IT, COE, RAI"},{title:"Quarterly — Executive Outcome Review",jtbd:["Validate business impact","Refresh roadmap","Budget and platform investments"],attendees:"CPO, Rich, Elle, Finance, IT, Data"}]; function initCarousel(){const track = $('#carTrack'); if(!track) return;
   track.innerHTML = cadenceCards.map(c=>`
     <div class="car__card">
       <div class="card">
